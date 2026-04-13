@@ -1,0 +1,123 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+    min-height: 100%;
+}
+body{
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+
+.largura-definida {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+
+
+.header{
+    background-color: #0F0F0F;
+    padding: 2.5rem;
+    border-bottom: 1px solid rgba(255, 0, 0, 0.164);
+}
+.header_content{
+    display: flex;
+}
+.header_content figure img{
+    width: 100%;
+    border-radius: 1rem;
+}
+.header_content figure{
+    width: 8rem;
+    
+}
+.header_content_texts{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 1rem;
+}
+.header_content_texts h1{
+    font-size: 2em;
+    color: white;
+}
+.header_content_texts p{
+    color: rgba(255, 255, 255, 0.404);
+    font-size: 1.4em;
+}
+
+main{
+    background-color: #0A0A0A;
+    padding: 2rem;
+    min-height: 100vh;
+}
+.container h2{
+    color: white;
+    font-size: 2em;
+}
+.container > p{
+    color: rgba(255, 255, 255, 0.479);
+    font-size: 1.4em;
+    margin-bottom: 3rem;
+}
+
+.container_divsDates{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.container_divsDates_divDate{
+    flex: 1 1 calc((100% / 3) - 2rem);
+    max-width: 35rem;
+    padding: 2rem;
+    background-color: #1A1A1A;
+    border: 1px solid rgba(255, 0, 0, 0.199);
+    border-radius: 1rem;
+    text-decoration: none;
+}
+.container_divsDates_divDate_icon{
+    display: flex;
+    justify-content: space-between;
+}
+.container_divsDates_divDate > p:nth-child(2){
+    color: white;
+    font-size: 1.6em;
+    margin-top: 1rem;
+}
+.container_divsDates_divDate > p:nth-child(3){
+    color: rgba(255, 255, 255, 0.37);
+    font-size: 1.2em;
+    margin-bottom: 1rem;
+}
+.container_divsDates_divDate_icon i{
+    font-size: 2.5em;
+    padding: 1rem 1.2rem;
+    background-color: #301414;
+    border-radius: 0.5rem;
+    color: #A81E3A;
+}
+.container_divsDates_divDate_icon p{
+    color: #A81E3A;
+    background-color: #301414;
+    padding: 1rem 1.5rem;
+    border-radius: 5rem;
+    font-size: 1.4em;
+}
+.container_divsDates_divDate > a{
+    color: #A81E3A;
+    font-size: 1.4em;
+    text-decoration: none;
+}
+.container_divsDates_divDate > a > span{
+    transition: all 0.2s ease-in-out;
+}
+.container_divsDates_divDate > a:hover > span{
+    margin-left: 0.5rem;
+}

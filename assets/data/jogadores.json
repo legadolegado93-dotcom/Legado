@@ -1,0 +1,175 @@
+{
+    "treino1": {
+    "data": "01/01/2026", 
+    "equipes": {
+        "SCORPIONS": {
+            "FOX ANDzin": [8, 5, 3, 4, 7],
+            "I'm black": [2, 7, 3, 2, 2],
+            "FOX MASSA": [5, 5, 3, 2, 8],
+            "w7♡♡PELÉ": [1, 0, 1, 3, 2]
+        },
+        "BESERKERS": {
+            "bK Lwzin": [2, 3, 1, 4, 2],
+            "bK CAOS": [0, 1, 0, 2, 2],
+            "bK Goat¹⁵⁷": [1, 0, 1, 3, 4],
+            "bKDRAGO9": [2, 0, 1, 2, 2]
+        },
+        "BESERKERS 2.0": {
+            "ØxGhost™": [1, 2, 2, 1, 0],
+            "bK GLM³⁰ あ": [0, 0, 1, 3, 3],
+            "bK DOUTOR": [1, 2, 0, 4, 0],
+            "bK ZEUS炎": [1, 1, null, 2, 1]
+        },
+        "001 GOATS": {
+            "001 vin™": [2, 1, 0, 0, 0],
+            "Dragonsx!": [0, 0, 0, 2, 0],
+            "7nxz ✓": [4, null, null, 1, 5],
+            "MF DINO!": [null, null, null, null, 1],
+            "juhcat": [6, 4, 2, 1, null]
+        },
+        "LK": {
+            "LK*ATIRADOR*": [6, 0, 2, 0, 4],
+            "LK-GENERAL": [null, 0, 2, 1, 3],
+            "LK duzinn$$": [1, 0, 2, 0, null],
+            "LK_GanjaV8™": [null, null, 0, null, null],
+            "LK BIEL⁰⁵¹": [3, null, null, null, null],
+            "PEDRO (LK)": [3, null, null, null, null]
+        },
+        "EQUIPE X": {
+            "XXXX n": [0, 3, 1, 5, 3],
+            "DT4 APOLLO": [0, 1, 4, 0, 0],
+            "XXXX trapx7": [1, 2, 1, 1, 0],
+            "XXXX JECK": [1, 2, 9, 1, null]
+        },
+        "BARCELONA": {
+            "BCN MANOLO²³": [null, 2, 0, 6, 1],
+            "BCN CHELLY": [0, 0, 1, 2, 1],
+            "job 愛": [0, 2, 1, 1, 1],
+            "VULGO_DINHO": [null, null, 1, 4, null],
+            "..Lipe⁶²": [null, 2, null, null, null]
+        },
+        "BESERKERS 3.0": {
+            "bielzinxit": [2, 0, 0, 3, 1],
+            "lustmoneyk": [5, 1, 0, 4, 3],
+            "aníbalcorteร": [1, 2, 0, 1, 0],
+            "♠fantama♠": [3, 1, 1, null, null]
+        },
+        "GHOST GIRLS": {
+            "SW ASTRID": [5, 0, 2, 5, 1],
+            "SW DZ9!": [3, 1, 7, 1, 0],
+            "SW G_SOUZA": [3, 0, 3, 2, 0],
+            "SW INGRID9": [1, 0, 1, 0, 0]
+        },
+        "THE CHARCUDOS": {
+            "者需要複製我": [null, null, null, 0, 2],
+            "LOS! G7ZIN": [1, 0, 0, 2, 1],
+            "OCZ⁰⁰⁷炎": [null, 0, 1, 2, 1],
+            "wodkayo": [null, null, 0, null, null],
+            "FULANINHØ": [1, 2, null, null, null],
+            "FOX F7.": [0, null, null, null, null],
+            "FOX 999z": [0, null, null, null, null]
+        },
+        "DE MANAUS": {
+            "odio'": [1, 0, 0, 1, null],
+            "DM S7yle": [0, 0, 0, 0, null],
+            "愛 d'mJAPONESA": [2, 0, 1, 0, null],
+            "木 FELIPE 69": [null, null, null, 0, null],
+            "†mafiosa†": [0, null, null, null, null]
+        },
+        "HAZARD FM7": {
+            "FM7 Noxx.MVP": [0, 1, null, null, null],
+            "J6KAIOL": [1, 1, null, null, null],
+            "FM7 SANTOSX7": [2, 1, null, null, null]
+        }
+    }
+    },
+    "treino2": {
+        "data": "06/04/2026",
+        "equipes": {
+            "HAZARD FM7": {               
+                "FM7 Noxx.MVP": [2, 3, 0, 6, 3], 
+                "FM7 SANTOSX7": [2, 4, 2, 3, 1],
+                "FM7 DIOGO": [2, 8, 2, 2, 3],
+                "Gosto.zim": [0, null, null, null, null],
+                "FM7 Bell": [null, 4, 1, 4, 4]
+            },
+            "TEAM FLUXO": {               
+                "XTREME NAO么": [2, 0, 0, null, null], 
+                "B²K_rγAm1v2": [2, 0, 0, null, null],
+                "✻fx0Sasuke×_": [1, 0, 0, null, null],
+                "Kayna": [0, null, 0, null, null],
+                "__hz_07": [null, 0, 0, null, null]
+            },
+            "DESTROYERS": {               
+                "RUSH7 ntj": [3, 5, 3, 1, 2], 
+                "SW JORDAN⁷": [11, 4, 8, 1, 5],
+                "SW NK7": [7, 2, 4, 0, 2],
+                "SW IGK9": [6, 3, 5, 2, 8]
+            },
+            "Barcelona": {               
+                "EQP PINGOLA": [null, 1, 0, 3, 4], 
+                "BCN Chelly": [null, 4, 0, 0, 0],
+                "BCN Itachi": [null, 1, 0, null, null],
+                "BCN Teus 07": [null, 2, 0, 2, 1]
+            },
+            "LK 01": {               
+                "LK-GENERAL": [1, 0, 1, 0, 0], 
+                "™Lucas244LK™": [2, 0, 2, 0, 1],
+                "LK duzinn$$": [3, 3, 2, 0, 2],
+                "FONTOURA.021": [1, 2, 0, 0, 1]
+            },
+            "LK 02": {               
+                "么Gui 乁ノ": [1, 0, 2, 1, 0], 
+                "LK_SABØTAGEⓋ": [0, 0, 1, 5, 0],
+                "Lk Bruniix": [1, 0, 0, 0, 3],
+                "Cautela_'LK'": [0, null, null, null, null],
+                "LK_GanjaVB": [null, null, 1, 2, null]
+            },
+            "001 GOATS": {               
+                "7nxz ✓": [3, 5, 0, null, null], 
+                "001 v0么™0": [0, 0, 0, null, null],
+                "DragonDsx!": [0, 3, 0, null, null],
+                "suarrez": [null, 3, 0, null, null]
+            },
+            "DE MANAUS": {               
+                "EGO|kawan": [1, 0, 1, 2, 2], 
+                "odio’": [1, 2, 0, 0, 0],
+                "iam : susu ✿": [1, 3, null, null,null],
+                "愛ᵃ'mJAPONESA": [3, 5, 6, 2, 1],
+                "asta noele": [null, null, 2, 3, 2]
+            },
+            "NIGHT RAID": {               
+                "†BOTZINHO": [3, 0, 0, null, null], 
+                "TSDthzz": [1, 0, 0, 0, null],
+                "SUESAPRIME Ⓥ": [2, 0, 0, 0, null],
+                "DAVIDAump[]": [1, null, null, null, null]
+            },
+            "L7 WARRIOZ": {               
+                "L7 OSIRIS": [0, 0, 0, null, 0], 
+                "DIABO LOIRO": [4, 2, 0, 0, 0],
+                "@magro.op": [1, 0, 0, null, null],
+                "PSICOump¢[]": [0, 0, 0, 0, 0],
+                "NV": [null, null, 0, 1, null]
+            },
+            "BESERKERS": {               
+                "b0K Lwzin ": [5, 0, 2, 4, 0], 
+                "bot.X!": [3, 0, 4, 0, 1],
+                "b0K Goat¹⁵⁷": [2, 0, 1, 2, 0],
+                "b0KDDRAGO9": [1, 0, 1, 1, 0]
+            },
+            "BESERKERS 2.0": {               
+                "b0K DOUTOR ✞": [1, 2, 1, 0, 0], 
+                "◉DメGhost™◉[]": [0, 0, 2, 0, 1],
+                "b0K_ZEUS炎[]": [0, 0, 4, 1, 0],
+                "Anibatcortes": [0, null, null, null, null],
+                "b0k GLM": [null, null, 1, 2, 0]
+            }
+            
+            
+           
+        }
+    }
+    
+}
+
+
