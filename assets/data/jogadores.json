@@ -40,12 +40,10 @@
             "FR MELIODAS": [0, 1, 2]
         },
         "XIT 8": {
-            "Gs7": [0, 0, 0],
-            "claudinho06": [0, 0, 0],
-            "cabeça cheia": [0, 0, 0],
-            "VIP OTAZUump": [0, 0, 0],
             "the king": [null, null, null],
-            "ZEUS": [null, null, null]
+            "ZEUS": [null, null, null],
+            "Gs Angelo": [null, null, null],
+            "Black": [null, null, null]
         },
         "REVENGERS": {
             "Tk7 noah": [null, null, null],
@@ -63,11 +61,10 @@
             "PAIN JC": [2, 2, 2]
         },
         "WOLF ELITE": {
-            "MT": [null, null, null],
-            "GABRIEL": [null, null, null],
-            "THYAGO": [null, null, null],
-            "KAUÃ": [null, null, null],
-            "GS": [null, null, null]
+           "Gs7": [0,0,0],
+           "cabeça cheia": [0,0,0],
+           "claudinho": [0,0,0],
+           "VIP OTAZU": [0,0,0]
         },
         "SS CEIFADORES": {
             "SS DUQUE": [2, 0, 0],
