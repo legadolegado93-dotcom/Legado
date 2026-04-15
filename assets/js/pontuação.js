@@ -76,7 +76,7 @@ const pegarDados = {
 
             resultadoFinal.push({
                 equipe: nomeEquipe,
-                quedas: 5,
+                quedas: arrayQuedas.length,
                 abate: kill,
                 booyah: booyah,
                 pts: equipePts,
@@ -124,7 +124,7 @@ let dados = []
 const tabela = {
     start() {
         const select = document.querySelector(".container_select")
-
+        
         //isso vai aparecer a tabela logo quando entrar
         const option = document.querySelector(".container_select").value
         const dados = pegarDados.start("treino1")
@@ -140,7 +140,7 @@ const tabela = {
 
             //pega todos os seasons um por um
             for (let seasons in seasonJson) {
-
+                console.log(dados)
                 //se as seasons do json for igual a que foi selecionada faz isso
                 if (seasons == seasonSelecionada) {
                     const dados = pegarDados.start(seasonSelecionada)
@@ -151,11 +151,13 @@ const tabela = {
         })
     },
     carregarTabela(arrayEquipes) {
+       
         const tbody = document.querySelector("#tbody")
         tbody.innerHTML = ""
         arrayEquipes.sort((a, b) => b.pts - a.pts)
         arrayEquipes.forEach((equipe, index) => {
             equipe.posicao = index + 1
+            
 
 
             criarTabela.start(equipe.posicao, equipe.equipe, equipe.quedas, equipe.abate, equipe.booyah, equipe.pts, equipe.data, equipe.nomeSeason)
@@ -170,6 +172,7 @@ const criarTabela = {
         this.posição = posição
         this.equipe = equipe
         this.quedas = quedas
+        
         this.abate = abate
         this.booyah = booyah
         this.pts = pts
