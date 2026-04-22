@@ -153,5 +153,76 @@
             "kx Gessyk\"": [1, 0, 1]
         }
     }
-}
+    },
+    "treino3": {
+    "data": "21/04/2026",
+    "equipes": {
+      "RAZE FOX": {
+        "RB TW07!": [4, 0, 0],
+        "JNFX MORENO™": [5, 1, 0],
+        "ANJ0G0d": [4, 0, 0],
+        "LIZ7C2Q2#0B": [2, 0, 0]
+      },
+      "SS GAMING": {
+        "SS DUQUE": [0, 2, 0],
+        "SS LUIS9": [0, 1, 0],
+        "CPX JERRY¹⁵⁷": [0, 0, 0],
+        "SS NBW'7": [0, 1, null],
+        "SS KINGX": [null, null, 0]
+      },
+      "META GAMING": {
+        "AUSENTE": [0, 0, 0]
+      },
+      "BL4ZE SPORT'S": {
+        "†siℓNA 007": [2, 0, null],
+        "BRUXO✍️": [1, 1, 0],
+        "NOX FREITAS": [0, 0, 2],
+        "NOX AMGN": [1, 0, 1],
+        "u xerec⁴": [null, null, 0]
+      },
+      "ALPHA TEAM": {
+        "✿ C O V I D 1 9 么": [1, 0, 0],
+        "YKS MITO❂": [0, 0, 0],
+        "@DAFURIA 333": [0, 0, 0],
+        "IDLETEDYOU": [0, 0, 0]
+      },
+      "XKZ LOBOS": {
+        "XKZ WILTZIN あ": [3, 0, 2],
+        "XKZ FERNANDA": [5, 2, 2],
+        "VZWATZADA⁴⁴⁴": [0, 2, 2],
+        "XKZ VINIあ": [2, 1, 2]
+      },
+      "BLACKSTAR": {
+        "LS★MARECHAL": [5, 3, 1],
+        "BLD TEUS": [3, 4, 2],
+        "WINBLESSED!": [2, 0, 0],
+        "..宇智波斑..": [1, 1, 1]
+      },
+      "ONE LEGACY": {
+        "AUSENTE": [0, 0, 0]
+      },
+      "ANGRYS": {
+        "CTP HYCK": [1, 5, 5],
+        "CTP PITOCO": [4, 4, 4],
+        "FORESTZADAA7": [1, 2, 4],
+        "DAPENHA~": [3, 3, 5]
+      },
+      "FLAMENGO CRF": {
+        "†FLA MANDELA": [0, null, null],
+        "FLA @RAIZINN": [0, null, null],
+        "FLA 105K": [0, null, null],
+        "THOR": [null, 5, 3],
+        "PEIXE": [null, 3, 3],
+        "JJOTA_FXP": [null, 2, 2],
+        "FLA TRURZIN": [null, 1, 2]
+      },
+      "FRANÇA": {
+        "FLAY9F7X2T9P": [0, 0, 0],
+        "DM VITOR": [0, 1, 0],
+        "FR LUCIFER": [0, 4, 0],
+        "NFX BIEL⁷": [0, 2, 0]
+      }
+    }
+    }
+
 }
