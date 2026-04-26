@@ -132,12 +132,6 @@ const criarTrPlayer = {
     }
 }
     
-
-
-
-
-
-
 // ESCUTADOR DE EVENTOS ÚNICO
 document.addEventListener("click", (event) => {
     for (let i = 1; i <= 12; i++) {
@@ -163,13 +157,6 @@ document.addEventListener("click", (event) => {
         }
     }
 });
-
-
-
-
-
-
-
 
 //aq forma os dados das equipes
 const dados = {
@@ -364,4 +351,3 @@ const informaçãoDealhadaa = {
 
     },
 }
-
