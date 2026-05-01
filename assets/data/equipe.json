@@ -499,7 +499,109 @@
             ]
         }
     ]
-}
+    },
+    "treino6": {
+    "data": "30/04/2026",
+    "equipes": [
+        {
+            "equipe": "DARKWOLVES",
+            "detalhes": [
+                { "queda": 1, "kills": 15, "posicao": 6 },
+                { "queda": 2, "kills": 3, "posicao": 5 },
+                { "queda": 3, "kills": 10, "posicao": 1 }
+            ]
+        },
+        {
+            "equipe": "PL4GG",
+            "detalhes": [
+                { "queda": 1, "kills": 8, "posicao": 5 },
+                { "queda": 2, "kills": 7, "posicao": 3 },
+                { "queda": 3, "kills": 7, "posicao": 2 }
+            ]
+        },
+        {
+            "equipe": "APOSENTADOS",
+            "detalhes": [
+                { "queda": 1, "kills": 7, "posicao": 3 },
+                { "queda": 2, "kills": 4, "posicao": 9 },
+                { "queda": 3, "kills": 7, "posicao": 3 }
+            ]
+        },
+        {
+            "equipe": "FRANÇA",
+            "detalhes": [
+                { "queda": 1, "kills": 0, "posicao": 10 },
+                { "queda": 2, "kills": 3, "posicao": 6 },
+                { "queda": 3, "kills": 3, "posicao": 4 }
+            ]
+        },
+        {
+            "equipe": "META GAMING",
+            "detalhes": [
+                { "queda": 1, "kills": 5, "posicao": 7 },
+                { "queda": 2, "kills": 1, "posicao": 8 },
+                { "queda": 3, "kills": 12, "posicao": 5 }
+            ]
+        },
+        {
+            "equipe": "ANGRYS",
+            "detalhes": [
+                { "queda": 1, "kills": 12, "posicao": 2 },
+                { "queda": 2, "kills": 13, "posicao": 1 },
+                { "queda": 3, "kills": 6, "posicao": 6 }
+            ]
+        },
+        {
+            "equipe": "FAC SPORTS",
+            "detalhes": [
+                { "queda": 1, "kills": 5, "posicao": 1 },
+                { "queda": 2, "kills": 8, "posicao": 2 },
+                { "queda": 3, "kills": 3, "posicao": 7 }
+            ]
+        },
+        {
+            "equipe": "TOXIC E-LEGENDS",
+            "detalhes": [
+                { "queda": 1, "kills": 1, "posicao": 8 },
+                { "queda": 2, "kills": 6, "posicao": 7 },
+                { "queda": 3, "kills": 1, "posicao": 8 }
+            ]
+        },
+        {
+            "equipe": "SG 7 TELA",
+            "detalhes": [
+                { "queda": 1, "kills": 3, "posicao": 4 },
+                { "queda": 2, "kills": 10, "posicao": 4 },
+                { "queda": 3, "kills": 2, "posicao": 9 }
+            ]
+        },
+        {
+            "equipe": "SS GAMING",
+            "detalhes": [
+                { "queda": 1, "kills": 0, "posicao": 13 },
+                { "queda": 2, "kills": 2, "posicao": 10 },
+                { "queda": 3, "kills": 2, "posicao": 10 }
+            ]
+        },
+        {
+            "equipe": "TROPA INSANA",
+            "detalhes": [
+                { "queda": 1, "kills": 4, "posicao": 9 },
+                { "queda": 2, "kills": 1, "posicao": 11 },
+                { "queda": 3, "kills": 0, "posicao": 11 }
+            ]
+        },
+        {
+            "equipe": "BAD INFINITY",
+            "detalhes": [
+                { "queda": 1, "kills": 0, "posicao": 13 },
+                { "queda": 2, "kills": 0, "posicao": 13 },
+                { "queda": 3, "kills": 0, "posicao": 13 }
+            ]
+        }
+    ]
+    }
+
 }
    
 
