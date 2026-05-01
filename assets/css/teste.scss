@@ -8,16 +8,23 @@ html{
 }
 body{
     min-height: 100dvh;
+    background: linear-gradient(135deg, #000000 0%, #111827 50%, #000000 100%);
+    font-family: "Poppins", sans-serif;
+}
+.largura-definida {
+    max-width: 120rem;
+    margin: 0 auto;
 }
 
 .header{
-    background-color: rgba(0, 0, 0, 0.185);
+    background: transparent;
+    backdrop-filter: blur(0.5rem);
+    border-bottom: 1px solid rgba(255, 0, 0, 0.205);
     position: sticky;
     top: 0;
     .header_nav{
         display: flex; 
         padding: 1rem;
-
         //hamburguer menu
         .hamburger-menu {
         
@@ -115,11 +122,111 @@ body{
             .img{
                 width: 100%;
                 border-radius: 50%;
-                box-shadow: 0px 2px 5px 3px red;
+                box-shadow: 0px 2px 10px 2px rgba(255, 0, 0, 0.281);
             }
         }
     }
 }
 
+main {
+    /* Background Geral da página (conforme o min-h-screen do React) */
+    background: linear-gradient(135deg, #000000 0%, #111827 50%, #000000 100%);
+    .introdução {
+        padding: 2rem;
+        background:
+            radial-gradient(circle at 50% 50%, rgba(220, 20, 60, 0.1) 0%, transparent 50%),
+            linear-gradient(to bottom, rgba(185, 28, 28, 0.1) 0%, transparent 100%);
+            border-top: 2px solid rgba(255, 0, 0, 0.411);
+            border-bottom: 4px solid;
+            border-image: linear-gradient(to right, transparent, #b91c1c, transparent) 1;
+        .introdução_container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .introdução_start{
+            display: flex;
+            align-items: center;
+            text-transform: uppercase;
+            display: inline-block;
+            color: #BD7B7D;
+            background-color: #2E1118;
+            padding: 1rem 1rem 1.2rem 1rem;
+            border-radius: 3rem;
+            border: 1px solid #ff00003d;
+            font-size: 1.8em;
+        }
+        .introdução_start img{
+            color: #ff0000;
+        }
+        .introdução_container h1{
+            font-size: 4.8em;
+            margin-top: 1rem;
+            color: #F35B5B;
+        }
+        .introdução_container p:nth-child(3){
+            font-size: 1.8em;
+            color: white;
+            text-align: center;
+            margin-top: 1rem;
+        }
+        .introdução_container p:nth-child(4){
+            font-size: 1.4em;
+            color: rgba(255, 255, 255, 0.459);
+            text-align: center;
+            margin-top: 3rem;
+        }
+        .introdução_container_btns a{
+            font-size: 1.8em;
+            background-color: #9D1B1B;
+            display: inline-block;
+            border: 3px solid rgba(255, 0, 0, 0.356);
+            padding: 1rem 4rem;
+            text-decoration: none;
+            color: black;
+            border-radius: 2rem;
+            text-transform: uppercase;
+            font-weight: bolder;
+            margin-top: 1rem;
+            box-shadow: 2px 5px 10px 2px rgba(255, 0, 0, 0.26);
+            transition: all ease-in-out 0.3s;
+        }
+        .introdução_container_btns a:hover{
+            transform: scale(1.1);
+        }
+    }
+    
+    .info{
+        padding: 2rem;
+        .info_content{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 16rem;
+            padding: 2rem 1.5rem;
 
+            background: linear-gradient(145deg,rgba(17, 24, 39, 0.8) 0%,rgba(0, 0, 0, 0.9)100%);
+            border: 1px solid rgba(185, 28, 28, 0.3);
+            border-radius: 1.5rem;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.6),0 0 15px rgba(185, 28, 28, 0.1);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            &:hover {
+                    transform: translateY(-5px);
+                    border-color: rgba(220, 38, 38, 0.6);
+                }
+        }
+        .info_content p:nth-child(1){
+            font-size: 3em;
+        }
+        .info_content p:nth-child(2){
+            font-size: 2em;
+            color: white;
+        }
+        .info_content p:nth-child(3){
+            font-size: 1.4em;
+            color: rgba(255, 255, 255, 0.534);
+        }
+    }
+}
 
