@@ -277,7 +277,7 @@ main {
 }
 .container .table_wrapper .container_table {
   border-collapse: collapse;
-  width: 100%;
+  display: block;
 }
 .container .table_wrapper .container_table thead {
   background-color: #000;
@@ -771,6 +771,10 @@ main {
   }
   .desempenhoDetalhado_player_partida {
     flex: 1 1 calc(33.3333333333% - 2rem) !important;
+  }
+  .container_table {
+    -webkit-overflow-scrolling: touch; /* Habilita o scroll nativo de toque no iOS */
+    overflow-x: auto;
   }
 }
 @media (min-width: 769px) {

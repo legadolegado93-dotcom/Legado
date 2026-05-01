@@ -304,7 +304,7 @@ main{
 
         .container_table {
             border-collapse: collapse;
-            width: 100%;
+            display: block;
         }
 
         .container_table thead {
@@ -874,6 +874,10 @@ main{
     }
     .desempenhoDetalhado_player_partida{
         flex: 1 1 calc((100% / 3) - 2rem) !important;
+    }
+    .container_table{
+        -webkit-overflow-scrolling: touch;/* Habilita o scroll nativo de toque no iOS */
+        overflow-x: auto;
     }
 }
 
