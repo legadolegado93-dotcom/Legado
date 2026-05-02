@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>O Legado</title>
+    <link rel="stylesheet" href="assets/css/index.scss">
     <link rel="stylesheet" href="assets/css/index.css">
 
     <!--FONTE-->
@@ -12,60 +13,109 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
     <!--FONTE-->
 
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SW7Q9LH3LR"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-SW7Q9LH3LR');
-    </script>
-    <!-- Google tag (gtag.js) -->
-     
-    <!--Incon-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!--Incon-->
+    <!--icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!--icon-->
 </head>
 <body>
     <header class="header">
-        <div class="header_content largura-definida">
-            <figure><img src="assets/img/Logo.jpg" alt=""></figure>
-            <div class="header_content_texts">
-                <h1>Ranking de Treinos</h1>
-                <p>Sistema de Estatísticas e Classificações</p>
+        <nav class="header_nav largura-definida">
+            <figure>
+                <a href="teste.html"><img src="assets/img/Logo.jpg" alt="" class="img"></a>
+            </figure>
+            <div class="hamburger-menu">
+                <input id="menu__toggle" type="checkbox" />
+                <label class="menu__btn" for="menu__toggle">
+                    <span></span>
+                </label>
+            
+                <ul class="menu__box">
+                    <li><a class="menu__item" href="index.html"><i class="fas fa-home"></i> Início</a></li>
+                    <li><a class="menu__item" href="#"><i class="fas fa-users"></i> Sobre Nós</a></li>
+                    <li><a class="menu__item" href="./assets/html/treinos.html"><i class="fas fa-trophy"></i> X-Treino</a></li>
+                </ul>
             </div>
-        </div>
+        </nav>
     </header>
 
     <main>
-        <section class="container largura-definida">
-            <h2>Selecione o Mês</h2>
-            <p>Escolha um mês para visualizar os treinos realizados</p>
+        <section class="introdução">
+            <div class="largura-definida introdução_container">
+                <p class="introdução_start"><img width="18" height="18" src="https://img.icons8.com/ios/50/ff0000/star--v1.png" alt="star--v1" /> Free Fire Guilda</p>
+                <h1>O Legado</h1>
+                <p>🔥 A Lenda Começa Aqui | Dominação Total no Free Fire</p>
+                <p>Somos mais que uma guilda. Somos uma família de guerreiros que domina o campo de batalha com estratégia, precisão e
+                união.</p>
+                <div class="introdução_container_btns">
+                    <a href="#">Junte-se a nós</a>
 
-            <div class="container_divsDates">
-
-                
-                <div class="container_divsDates_divDate">
-                    <div class="container_divsDates_divDate_icon">
-                            <i class="fa-regular fa-calendar-check"></i>
-                            <p><span>6</span> treinos</p>
-                    </div>
-                    <p>Abril 2026</p>
-                    <p>Ver dias de treino</p>
-                    <a href="assets/html/treinosMés.html">Acessar <span>></span></a>
                 </div>
-
-                
-                
-
+            </div>
+        </section>
+        
+        <section class=" largura-definida info">
+            <div class="info_content">
+                <p>⚔️</p>
+                <p>40+</p>
+                <p>Membros Ativos</p>
             </div>
 
         </section>
-        
-    </main>
-    
 
+        <section class="largura-definida historia">
+            <h1 class="title">Explore Nosso Universo</h1>
+            <p class="text">Descubra tudo sobre O Legado</p>
+
+            <div class="historia_container">
+                <div class="historia_container_content">
+                    <i class="fa-solid fa-trophy icon-trofeu"></i>
+                    <h2>X-Treino Competitivo</h2>
+                    <p>Participe de treinos semanais com ranking oficial</p>
+                    <a href="#">Ver Rankings <i class="fa-solid fa-arrow-right seta-link"></i></a>
+                </div>
+
+                <div class="historia_container_content">
+                    <i class="fa-solid fa-users icon-azul"></i>
+                    <h2>Conheça a Guilda</h2>
+                    <p>História, valores e conquistas da Team Secret desde sua fundação</p>
+                    <a href="#">Sobre Nós <i class="fa-solid fa-arrow-right seta-link"></i></a>
+                </div>
+
+                <div class="historia_container_content">
+                    <i class="fa-solid fa-bullseye icon-verde"></i>
+                    <h2>Faça Parte do Time</h2>
+                    <p>Inscreva-se para o processo seletivo e mostre seu talento</p>
+                    <a href="#">Recrutamento <i class="fa-solid fa-arrow-right seta-link"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="largura-definida inscreva">
+            <div class="inscreva_container">
+                <i class="fa-solid fa-bolt icon-raio"></i>
+                <h1>Pronto Para Fazer História?</h1>
+                <p>Junte-se à elite do Free Fire brasileiro. Vagas limitadas para jogadores dedicados e competitivos.</p>
+                <button>Inscreva-se Agora</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p class="footer_siga">Siga a guilda em todas as redes sociais!</p>
+        <div class="links">
     
+            <a href="https://www.instagram.com/lega_dooficial1?igsh=bmVueG4wdzU3eDM4" target="_blank"><i
+                    class="fa-brands fa-instagram"></i></a>
+            <a href="https://tiktok.com/@dieguinho916" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+            <!-- <a href=""><i class="fa-brands fa-whatsapp"></i></a> -->
+        </div>
+    
+        <p class="copyright">© 2026 X-Treino Legado | Ranking Free Fire</p>
+    </footer>
+
+    <script>
+        alert("site em manutenção")
+    </script>
+   
 </body>
 </html>

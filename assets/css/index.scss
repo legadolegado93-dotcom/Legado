@@ -10,6 +10,7 @@ body{
     min-height: 100dvh;
     background: linear-gradient(135deg, #000000 0%, #111827 50%, #000000 100%);
     font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
 }
 
 
@@ -30,6 +31,7 @@ body{
     .header_nav{
         display: flex; 
         padding: 1rem;
+        justify-content: space-between;
         //hamburguer menu
         .hamburger-menu {
         
@@ -53,6 +55,7 @@ body{
         
             #menu__toggle:checked~.menu__box {
                 right: 0 !important;
+                // transform: translateX(0);
             }
         
             .menu__btn {
@@ -442,3 +445,44 @@ main {
     }
 }
 
+
+
+@media (min-width: 768px){
+    //hamburguer menu
+    #menu__toggle{
+        display: none !important;
+    }
+    .menu__btn{
+        display: none !important;
+    }
+    .menu__box{
+        position: static !important;
+        display: flex !important;
+        padding: 0 !important;
+        width: auto !important;
+        min-height: auto !important;
+        background-color: inherit !important;
+        box-shadow: none !important;
+    }
+    .menu__box a{
+        font-size: 1.6em !important;
+        padding: 1rem !important;
+        color: rgba(255, 255, 255, 0.658) !important;
+    }
+    .menu__box li{
+        margin-left: 1rem !important;
+    }
+    .menu__box a:hover{
+        transform: scale(1.1) !important;
+        background-color: transparent !important;
+        color: #ff1a1ab6 !important;
+    }
+    //hamburguer menu
+    .historia_container{
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+    }
+    .historia_container_content{
+        flex: 1 1 calc((100% / 3) - 2rem);
+    }
+}
