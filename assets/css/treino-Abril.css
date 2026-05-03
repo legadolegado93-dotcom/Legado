@@ -376,9 +376,9 @@ main {
   font-size: 1.4rem;
   text-transform: uppercase;
 }
-.container .table_wrapper .equipe_logo {
-  width: 3rem;
-  height: 3rem;
+.container .table_wrapper .equipe_logo img {
+  width: 4rem;
+  height: 4rem;
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;

@@ -1,12 +1,25 @@
+// Recupera o valor que foi salvo na página anterior
+const mesSelecionado = localStorage.getItem("mesSelecionado");
 
-//pega os dados do json
+let equipesExportadas = [];
+export { equipesExportadas };
+    
+let jogadoresExportadas = []
+export { jogadoresExportadas };
+
+if (mesSelecionado) {
+    // Aqui você chama suas funções de carregar dados baseadas no mês
+    // carregarDados(mesSelecionado);
+}
+
+// pega os dados do json
 let season
 let jogadores
 async function carregarDados() {
-    const resposta = await fetch("../data/equipe.json")
+    const resposta = await fetch("../data/xtreino-equipe.json")
     season = await resposta.json()
 
-    const resposta2 = await fetch("../data/jogadores.json")
+    const resposta2 = await fetch("../data/xtreino-jogadores.json")
     jogadores = await resposta2.json()
 }
 //o js para e espera pegar todos os dados no json
@@ -36,42 +49,38 @@ const classificação = [
 
 // aq ele pega e armazena todos os dados do json
 const pegarDados = {
-    start(seasonSelecionada) {
-        //aq da um return nessa função com os dados
-        return this.pegarDadosDasEquipes(season[seasonSelecionada], seasonSelecionada)
+    start(mesSelecionado, treinoSelecionado) {
+        return this.pegarDadosDasEquipes(
+            season[mesSelecionado][treinoSelecionado],
+            treinoSelecionado
+        )
     },
-    pegarDadosDasEquipes(seasonSelecionada, nomeDaSeason) {
 
-        //aq ira pegar o arrays dos objs equipes
-        const arrayEquipes = seasonSelecionada.equipes
+    pegarDadosDasEquipes(treinoSelecionado, nomeDoTreino) {
+        const arrayEquipes = treinoSelecionado.equipes
         const resultadoFinal = []
-        const data = seasonSelecionada.data
-        const nomeSeason = nomeDaSeason
+        const data = treinoSelecionado.data
 
         arrayEquipes.forEach(infoEquipes => {
-            //serve para ajudar ao somatorio
             let equipePts = 0
             let kill = 0
             let posição = 0
             let booyah = 0
 
-            //aq mostra os nomes das equipes
             const nomeEquipe = infoEquipes.equipe
-
             const arrayQuedas = infoEquipes.detalhes
+            const logo = infoEquipes.logo
+
             arrayQuedas.forEach(objQuedas => {
-                //aq pega todos os dados das quedas,kills,posição
-                const numeroDaQueda = objQuedas.queda
                 const numeroDaKills = objQuedas.kills
                 const numeroDaPosição = objQuedas.posicao
-                //seria aq os dados individuais
-                if (numeroDaPosição == 1) {
-                    booyah++
-                }
-                //aq soma todas as kills e os pts de posição e armazena
+
+                if (numeroDaPosição == 1) booyah++
+
                 kill = this.somarPontosKill(kill, numeroDaKills)
                 posição = this.somaPontosPosição(posição, numeroDaPosição)
             })
+
             equipePts = kill + posição
 
             resultadoFinal.push({
@@ -81,110 +90,31 @@ const pegarDados = {
                 booyah: booyah,
                 pts: equipePts,
                 data: data,
-                nomeSeason: nomeSeason
+                nomeSeason: nomeDoTreino,
+                logo: logo
             })
-
-        });
+        })
 
         return resultadoFinal
-
-
     },
 
-    //aq soma as kills
     somarPontosKill(kill, numeroDaKills) {
-        let pontuaçãoKill = kill + numeroDaKills
-        return pontuaçãoKill
+        return kill + numeroDaKills
     },
 
-    //ira somar os pontos de posição
     somaPontosPosição(posição, numeroDaPosição) {
-        //essa variavel ir armazenar os pts por queda
         let pontoGanhoPorPartida = 0
 
-        //ira percorrer os objs dentro do array classificação
         classificação.forEach(objClassificaçãoPosição => {
-            //se o numero da posição na queda for igual ao numero de posição da lista faça
             if (objClassificaçãoPosição.posição == numeroDaPosição) {
-                //ira somar os pts feito na partida
                 pontoGanhoPorPartida = objClassificaçãoPosição.pts
             }
         })
+
         return pontoGanhoPorPartida + posição
-
     }
-
 }
-
-
-// const pegarDados = {
-//     start(mesSelecionado, treinoSelecionado) {
-//         return this.pegarDadosDasEquipes(
-//             season[mesSelecionado][treinoSelecionado],
-//             treinoSelecionado
-//         )
-//     },
-
-//     pegarDadosDasEquipes(treinoSelecionado, nomeDoTreino) {
-//         const arrayEquipes = treinoSelecionado.equipes
-//         const resultadoFinal = []
-//         const data = treinoSelecionado.data
-
-//         arrayEquipes.forEach(infoEquipes => {
-//             let equipePts = 0
-//             let kill = 0
-//             let posição = 0
-//             let booyah = 0
-
-//             const nomeEquipe = infoEquipes.equipe
-//             const arrayQuedas = infoEquipes.detalhes
-
-//             arrayQuedas.forEach(objQuedas => {
-//                 const numeroDaKills = objQuedas.kills
-//                 const numeroDaPosição = objQuedas.posicao
-
-//                 if (numeroDaPosição == 1) booyah++
-
-//                 kill = this.somarPontosKill(kill, numeroDaKills)
-//                 posição = this.somaPontosPosição(posição, numeroDaPosição)
-//             })
-
-//             equipePts = kill + posição
-
-//             resultadoFinal.push({
-//                 equipe: nomeEquipe,
-//                 quedas: arrayQuedas.length,
-//                 abate: kill,
-//                 booyah: booyah,
-//                 pts: equipePts,
-//                 data: data,
-//                 nomeSeason: nomeDoTreino
-//             })
-//         })
-
-//         return resultadoFinal
-//     },
-
-//     somarPontosKill(kill, numeroDaKills) {
-//         return kill + numeroDaKills
-//     },
-
-//     somaPontosPosição(posição, numeroDaPosição) {
-//         let pontoGanhoPorPartida = 0
-
-//         classificação.forEach(objClassificaçãoPosição => {
-//             if (objClassificaçãoPosição.posição == numeroDaPosição) {
-//                 pontoGanhoPorPartida = objClassificaçãoPosição.pts
-//             }
-//         })
-
-//         return pontoGanhoPorPartida + posição
-//     }
-// }
 let dados = []
-
-
-
 
 //aq ira formar os dados para criar a tabela    
 const tabela = {
@@ -193,22 +123,24 @@ const tabela = {
         
         //isso vai aparecer a tabela logo quando entrar
         const option = document.querySelector(".container_select").value
-        const dados = pegarDados.start("treino1")
+        const dados = pegarDados.start(mesSelecionado, "treino1")
         this.carregarTabela(dados)
 
         //quando seleciona o valor do select
         select.addEventListener("change", () => {
             const seasonSelecionada = select.value
-
+            
 
             //são as seasons que estão do json
-            const seasonJson = season
+            const seasonJson = season[mesSelecionado]
+            
 
             //pega todos os seasons um por um
             for (let seasons in seasonJson) {
                 //se as seasons do json for igual a que foi selecionada faz isso
                 if (seasons == seasonSelecionada) {
-                    const dados = pegarDados.start(seasonSelecionada)
+                    const dados = pegarDados.start(mesSelecionado, seasonSelecionada)
+                    
                     this.carregarTabela(dados)
                 }
 
@@ -216,16 +148,18 @@ const tabela = {
         })
     },
     carregarTabela(arrayEquipes) {
-       
+        
         const tbody = document.querySelector("#tbody")
         tbody.innerHTML = ""
         arrayEquipes.sort((a, b) => b.pts - a.pts)
         arrayEquipes.forEach((equipe, index) => {
-            equipe.posicao = index + 1
             
+            equipe.posicao = index + 1
+            equipesExportadas.push(equipe)
 
-
-            criarTabela.start(equipe.posicao, equipe.equipe, equipe.quedas, equipe.abate, equipe.booyah, equipe.pts, equipe.data, equipe.nomeSeason)
+            
+            
+            criarTabela.start(equipe.posicao, equipe.equipe, equipe.quedas, equipe.abate, equipe.booyah, equipe.pts, equipe.data, equipe.nomeSeason, equipe.logo)
         })
         // new Equipe("1", "detonadores", 1,2,3,4, "01/01/2000", "season6")
     }
@@ -233,7 +167,7 @@ const tabela = {
 
 const criarTabela = {
 
-    start(posição, equipe, quedas, abate, booyah, pts, data, season) {
+    start(posição, equipe, quedas, abate, booyah, pts, data, season, logo) {
         this.posição = posição
         this.equipe = equipe
         this.quedas = quedas
@@ -243,6 +177,7 @@ const criarTabela = {
         this.pts = pts
         this.data = data
         this.season = season
+        this.logo = logo
         const tbody = document.querySelector("#tbody")
         this.criarTr(tbody, posição, equipe)
         this.mudarData(data)
@@ -256,6 +191,7 @@ const criarTabela = {
         const tr = tbody.appendChild(createTr)
 
         this.criarPosiçãoTd(tr)
+        this.criarLogo(tr)
         this.criarEquipeTd(tr)
         this.criarQuedasTd(tr)
         this.criarAbatesTd(tr)
@@ -270,6 +206,27 @@ const criarTabela = {
         tr.appendChild(td)
         td.appendChild(p)
         p.innerHTML = `${this.posição}`
+    },
+    criarLogo(tr) {
+        if (this.logo !== undefined) {
+            const td = document.createElement("td");
+            td.setAttribute("class", "equipe_logo");
+            tr.appendChild(td);
+    
+            // Cria o elemento de imagem
+            const img = document.createElement("img");
+    
+            // Define o caminho da imagem que vem do JSON
+            img.src = this.logo;
+    
+            // Adiciona uma classe para você estilizar o tamanho no CSS (ex: .logo-equipe { width: 30px; })
+            img.setAttribute("class", "logo-equipe");
+    
+            // Coloca a imagem dentro da célula (td)
+            td.appendChild(img);
+            
+        }
+        
     },
     criarEquipeTd(tr) {
         const td = document.createElement("td")
@@ -338,6 +295,7 @@ const vereficaçãoPlayer = {
         //isso aq aparece o primeiro treino
         const option = document.querySelector(".container_select").value
         this.seasonSelecionada("treino1")
+        
 
         //quando seleciona o valor do select
         select.addEventListener("change", () => {
@@ -348,9 +306,9 @@ const vereficaçãoPlayer = {
         })
     },
     seasonSelecionada(seasonEscolhida) {
-        for (let seasonJson in jogadores) {
+        for (let seasonJson in jogadores[mesSelecionado]) {
             if (seasonEscolhida == seasonJson) {
-                const equipesPlayers = jogadores[seasonJson].equipes
+                const equipesPlayers = jogadores[mesSelecionado][seasonJson].equipes
                 formarDadosJogadores.start(equipesPlayers)
             }
         }
@@ -360,7 +318,7 @@ const vereficaçãoPlayer = {
 //aq ira pegar os dados em json e organizar eles para enviar no criarRankJogador
 const formarDadosJogadores = {
     start(equipesPlayers) {
-
+        
         this.ranking = []
         // console.log(equipesPlayers)
 
@@ -421,6 +379,7 @@ const formarDadosJogadores = {
 //aq com os dados eles pegam os dados e coloca na tela
 const criarRankJogador = {
     start(objJogadores) {
+        jogadoresExportadas.push(objJogadores)
         const div = document.querySelector(".top_kills_grid")
         div.textContent = ""
 
@@ -509,9 +468,3 @@ const criarRankJogador = {
         cardContent.appendChild(btn)
     }
 }
-
-
-
-
-
-

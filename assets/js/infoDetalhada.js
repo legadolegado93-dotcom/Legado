@@ -1,13 +1,14 @@
+const mesSelecionado = localStorage.getItem("mesSelecionado");
 
 let season;
 let jogadores;
 
 async function carregarDados() {
     try {
-        const resposta = await fetch("../data/equipe.json");
+        const resposta = await fetch("../data/xtreino-equipe.json");
         season = await resposta.json();
 
-        const resposta2 = await fetch("../data/jogadores.json");
+        const resposta2 = await fetch("../data/xtreino-jogadores.json");
         jogadores = await resposta2.json();
         
         
@@ -45,7 +46,8 @@ const dadosPlayer = {
         }
         
         // Caminho exato no seu JSON: jogadores -> treinoX -> equipes -> NomeEquipe -> NomeJogador
-        const killsArray = jogadores[select].equipes[nomeEquipe][nomeJogador];
+        
+        const killsArray = jogadores[mesSelecionado][select].equipes[nomeEquipe][nomeJogador];
 
         // Manda o array de kills para ser construído no HTML
         criarTrPlayer.start(divCard, nomeJogador, killsArray);
@@ -58,7 +60,6 @@ const criarTrPlayer = {
         const nomeJogadorSemEspaço = nomeJogador.replace(/[^\w]/g, "");
         
         const divExistente = document.querySelector(`#${nomeJogadorSemEspaço}`)
-        console.log(nomeJogador)
         if(divExistente){
             divExistente.remove()
             return
@@ -169,7 +170,7 @@ const dados = {
         if (seasonSelecionada == "treinoSelecionado") {
             seasonSelecionada = "treino1"
         }
-        const equipes = season[seasonSelecionada].equipes;
+        const equipes = season[mesSelecionado][seasonSelecionada].equipes;
 
         equipes.forEach(equipe => {
             // Verifica se o nome da equipe bate com a classe da linha clicada
@@ -338,7 +339,6 @@ const informaçãoDealhadaa = {
 
     },
     criarPTotal(totalPartida){
-        console.log(totalPartida)
         const p = document.createElement("p")
         const span = document.createElement("span")
         const soma = totalPartida
