@@ -34,7 +34,7 @@ const classificação = [
     { kill: 1 },
 ]
 
-//aq ele pega e armazena todos os dados do json
+// aq ele pega e armazena todos os dados do json
 const pegarDados = {
     start(seasonSelecionada) {
         //aq da um return nessa função com os dados
@@ -115,6 +115,72 @@ const pegarDados = {
     }
 
 }
+
+
+// const pegarDados = {
+//     start(mesSelecionado, treinoSelecionado) {
+//         return this.pegarDadosDasEquipes(
+//             season[mesSelecionado][treinoSelecionado],
+//             treinoSelecionado
+//         )
+//     },
+
+//     pegarDadosDasEquipes(treinoSelecionado, nomeDoTreino) {
+//         const arrayEquipes = treinoSelecionado.equipes
+//         const resultadoFinal = []
+//         const data = treinoSelecionado.data
+
+//         arrayEquipes.forEach(infoEquipes => {
+//             let equipePts = 0
+//             let kill = 0
+//             let posição = 0
+//             let booyah = 0
+
+//             const nomeEquipe = infoEquipes.equipe
+//             const arrayQuedas = infoEquipes.detalhes
+
+//             arrayQuedas.forEach(objQuedas => {
+//                 const numeroDaKills = objQuedas.kills
+//                 const numeroDaPosição = objQuedas.posicao
+
+//                 if (numeroDaPosição == 1) booyah++
+
+//                 kill = this.somarPontosKill(kill, numeroDaKills)
+//                 posição = this.somaPontosPosição(posição, numeroDaPosição)
+//             })
+
+//             equipePts = kill + posição
+
+//             resultadoFinal.push({
+//                 equipe: nomeEquipe,
+//                 quedas: arrayQuedas.length,
+//                 abate: kill,
+//                 booyah: booyah,
+//                 pts: equipePts,
+//                 data: data,
+//                 nomeSeason: nomeDoTreino
+//             })
+//         })
+
+//         return resultadoFinal
+//     },
+
+//     somarPontosKill(kill, numeroDaKills) {
+//         return kill + numeroDaKills
+//     },
+
+//     somaPontosPosição(posição, numeroDaPosição) {
+//         let pontoGanhoPorPartida = 0
+
+//         classificação.forEach(objClassificaçãoPosição => {
+//             if (objClassificaçãoPosição.posição == numeroDaPosição) {
+//                 pontoGanhoPorPartida = objClassificaçãoPosição.pts
+//             }
+//         })
+
+//         return pontoGanhoPorPartida + posição
+//     }
+// }
 let dados = []
 
 
