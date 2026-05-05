@@ -5,10 +5,10 @@ let jogadores;
 
 async function carregarDados() {
     try {
-        const resposta = await fetch("../data/xtreino-equipe.json");
+        const resposta = await fetch("/assets/data/xtreinoMensal/equipe.json");
         season = await resposta.json();
 
-        const resposta2 = await fetch("../data/xtreino-jogadores.json");
+        const resposta2 = await fetch("/assets/data/xtreinoMensal/jogadores.json");
         jogadores = await resposta2.json();
         
         
