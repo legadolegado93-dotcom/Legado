@@ -5,12 +5,14 @@
 }
 html{
     font-size: 62.5%;
+    overflow-x: hidden;
 }
 body{
     min-height: 100dvh;
     background: linear-gradient(135deg, #000000 0%, #111827 50%, #000000 100%);
     font-family: "Poppins", sans-serif;
     overflow-x: hidden;
+    position: relative
 }
 
 
@@ -28,6 +30,7 @@ body{
     position: sticky;
     top: 0;
     z-index: 99;
+    overflow: hidden;
     .header_nav{
         display: flex; 
         padding: 1rem;
