@@ -155,6 +155,7 @@ main{
     margin-top: 11rem !important;
     background: linear-gradient(135deg, #000000 0%, #111827 50%);
     padding: 2rem;
+
     .quemSomos{
         text-align: center;
         .quemSomos_container p:nth-child(1){
@@ -196,8 +197,138 @@ main{
             font-weight: bold;
         }
     }
-}
 
+    .valores{
+        margin-top: 6rem;
+        .title{
+            color: white;
+            text-align: center;
+            font-size: 3em;
+            font-weight: bold;
+        }
+        .valores_container{
+            .valores_container_content{
+                background: linear-gradient(140deg, #101624, #020304);
+                margin: 1.5rem 0; // Remova o margin-bottom se usar o 'gap' no container
+                padding: 2.5rem 1.5rem; // Aumentei o padding superior/inferior
+                border: 1px solid #421214;
+                border-radius: 2rem;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                max-width: 32rem;
+            }
+            .valores_container_content i{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 8rem; // Largura fixa
+                height: 8rem; // Altura igual à largura
+                
+                font-size: 3rem;
+                background-color: #891D1D;
+                border-radius: 1.2rem;
+                color: white;
+                margin-bottom: 1.5rem;
+            }
+            .valores_container_content h2{
+                color: white;
+                font-size: 2em;
+                margin: 1rem 0;
+            }
+            .valores_container_content p{
+                font-size: 1.4em;
+                color: rgba(255, 255, 255, 0.377);
+            }
+        }
+    }
+
+    .jornada {
+    padding: 4rem 1rem;
+    color: white;
+
+    .jornada_title {
+        font-size: 2.5rem; // Ajustado para mobile
+        margin-bottom: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .timeline {
+        position: relative;
+        max-width: 100%;
+        margin: 0 auto;
+        padding-bottom: 2rem;
+
+        // A linha vermelha fixada na esquerda
+        &::after {
+            content: '';
+            position: absolute;
+            width: 3px;
+            background-color: #891D1D;
+            top: 0;
+            bottom: 0;
+            left: 20px;
+        }
+
+        .timeline_item {
+            position: relative;
+            width: 100%;
+            padding: 15px 0 15px 50px; // Espaço para a linha e bolinha
+            box-sizing: border-box;
+
+            // As bolinhas (indicadores de tempo)
+            &::after {
+                content: '';
+                position: absolute;
+                width: 14px;
+                height: 14px;
+                left: 14px; // Centraliza com a linha de 3px
+                background-color: #891D1D;
+                border: 2px solid #ff0000;
+                top: 35px;
+                border-radius: 50%;
+                z-index: 2;
+            }
+
+            .timeline_content {
+                background: linear-gradient(140deg, #101624, #05070a);
+                padding: 1.2rem;
+                border: 1px solid #421214;
+                border-radius: 1rem;
+                width: 100%;
+
+                .year {
+                    background-color: #891D1D;
+                    padding: 3px 10px;
+                    border-radius: 5px;
+                    font-size: 0.75rem;
+                    font-weight: bold;
+                    display: inline-block;
+                    margin-bottom: 8px;
+                }
+
+                h3 {
+                    font-size: 1.6em;
+                    margin: 0 0 8px 0;
+                    color: #fff;
+                }
+
+                p {
+                    color: rgba(255, 255, 255, 0.7);
+                    font-size: 1.3em;
+                    line-height: 1.4;
+                    margin: 0;
+                }
+            }
+        }
+    }
+    }
+}
 
 
 
@@ -242,4 +373,100 @@ main{
     }
     //hamburguer menu
 
+
+
+
+
+
+
+   .jornada {
+        .timeline {
+            max-width: 900px;
+            margin: 0 auto;
+
+            // Reposiciona a linha para o centro exato
+            &::after {
+                left: 50% !important;
+                transform: translateX(-50%);
+                margin-left: 0;
+            }
+
+            .timeline_item {
+                width: 50% !important; // Obriga a ocupar só metade
+                padding: 20px !important;
+                
+                // Configuração para os itens da ESQUERDA
+                &.left {
+                    left: 0 !important;
+                    text-align: right;
+                    padding-right: 45px !important; // Espaço para a linha
+
+                    &::after {
+                        right: -8px !important; // Cola a bolinha na linha (metade para fora)
+                        left: auto !important;
+                        top: 45px;
+                    }
+                }
+
+                // Configuração para os itens da DIREITA
+                &.right {
+                    left: 50% !important; // Move para a metade direita
+                    text-align: left;
+                    padding-left: 45px !important; // Espaço para a linha
+
+                    &::after {
+                        left: -8px !important; // Cola a bolinha na linha
+                        right: auto !important;
+                        top: 45px;
+                    }
+                }
+            }
+        }
+    }
+
 }
+
+
+
+
+//VERSÃO TABLET (Telas > 768px)
+
+// @media (min-width: 769px) and (max-width: 1024px) {
+//     .timeline {
+//         max-width: 800px; // Centraliza e limita a largura
+
+//         // A linha central volta para o meio
+//         &::after {
+//             left: 50%;
+//             margin-left: -1.5px;
+//         }
+//     }
+
+//     .timeline_item {
+//         width: 50%; // Metade da largura para cada lado
+
+//         // Item da ESQUERDA
+//         &.left {
+//             left: 0;
+//             text-align: right;
+//             padding: 10px 40px 10px 0;
+
+//             &::after {
+//                 right: -6px; // Bolinha na borda direita
+//                 left: auto;
+//             }
+//         }
+
+//         // Item da DIREITA
+//         &.right {
+//             left: 50%;
+//             text-align: left;
+//             padding: 10px 0 10px 40px;
+
+//             &::after {
+//                 left: -6px; // Bolinha na borda esquerda
+//                 right: auto;
+//             }
+//         }
+//     }
+// }
