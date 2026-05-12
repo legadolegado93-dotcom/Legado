@@ -106,7 +106,7 @@ body {
                 position: fixed;
                 top: 0;
                 right: -100%;
-                width: 300px;
+                width: 65%;
                 min-height: 100dvh;
                 margin: 0;
                 padding: 80px 0;
@@ -205,8 +205,12 @@ main{
             text-align: center;
             font-size: 3em;
             font-weight: bold;
+            margin-bottom: 2.5rem;
         }
         .valores_container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             .valores_container_content{
                 background: linear-gradient(140deg, #101624, #020304);
                 margin: 1.5rem 0; // Remova o margin-bottom se usar o 'gap' no container
@@ -380,51 +384,194 @@ main{
             }
         }
     }
+
+    .comunidade{
+        margin-top: 5rem;
+        .comunidade_container{
+            background-color: #841D1D;
+            text-align: center;
+            border-radius: 1rem;
+            padding: 2rem;
+        }
+        .comunidade_container i{
+            margin-top: 3rem;
+            margin-bottom: 2rem;
+            font-size: 3.5em;
+        }
+        .comunidade_container h2{
+            font-size: 2.5em;
+            color: white;
+            font-weight: bolder;
+            margin-bottom: 1rem;
+        }
+        .comunidade_container > p{
+            font-size: 1.4em;
+            color: rgba(255, 255, 255, 0.438);
+            margin-bottom: 1.5rem;
+        }
+        .comunidade_container_infos{
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+        }
+        .comunidade_container_infos_info > h3{
+            color: #9CA3A1;
+            font-size: 1em;
+        }
+        .comunidade_container_infos_info > p{
+            color: white;
+            font-size: 2em;
+            font-weight: bolder;
+        }
+        .amarelo{
+            color: #FACC15 !important;
+        }
+    }
+
+
+    
+}
+
+.footer {
+    background-color: #050505;
+    background: linear-gradient(to right, #0A0E17, #010102);
+    padding: 4rem 2rem;
+    border-top: 1px solid rgba(128, 0, 128, 0.479);
+    text-align: center;
+
+    .footer_siga {
+        color: #60A5FA;
+        text-align: center;
+        font-size: 1.8em;
+        font-weight: bold;
+    }
+
+    .links a:nth-child(1) {
+        color: white;
+        text-align: center;
+        font-size: 1.8em;
+        background: linear-gradient(to right, #db2777, #9333ea);
+        padding: 0.5rem 1rem;
+        border-radius: 2rem;
+        display: inline-block;
+    }
+
+    .links a:nth-child(1) {
+        color: white;
+        font-size: 1.8em;
+        background: linear-gradient(to right, #db2777, #9333ea);
+        padding: 0.5rem 1rem;
+        border-radius: 2rem;
+        display: inline-block;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .links a:nth-child(2) {
+        color: white;
+        font-size: 1.8em;
+        background-color: black;
+        padding: 0.5rem 1rem;
+        border-radius: 2rem;
+        display: inline-block;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .links a:nth-child(3) {
+        color: white;
+        font-size: 1.8em;
+        background-color: #2BD46A;
+        padding: 0.5rem 1rem;
+        border-radius: 2rem;
+        display: inline-block;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .links a:hover {
+        transform: scale(1.1);
+    }
+
+    .links {
+        margin-top: 2rem;
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .copyright {
+        font-size: 1.4em;
+        color: #565B68;
+        margin-top: 2rem;
+    }
 }
 
 
 
-
-
-
+//tablet
 @media (min-width: 768px) {
+    .header{
+        //hamburguer menu
+        #menu__toggle {
+            display: none !important;
+        }
+    
+        .menu__btn {
+            display: none !important;
+        }
+    
+        .menu__box {
+            position: static !important;
+            display: flex !important;
+            padding: 0 !important;
+            width: auto !important;
+            min-height: auto !important;
+            background-color: inherit !important;
+            box-shadow: none !important;
+        }
+    
+        .menu__box a {
+            font-size: 1.6em !important;
+            padding: 1rem !important;
+            color: rgba(255, 255, 255, 0.658) !important;
+        }
+    
+        .menu__box li {
+            margin-left: 1rem !important;
+        }
+    
+        .menu__box a:hover {
+            transform: scale(1.1) !important;
+            background-color: transparent !important;
+            color: #ff1a1ab6 !important;
+        }
+        //hamburguer menu
 
-    //hamburguer menu
-    #menu__toggle {
-        display: none !important;
     }
 
-    .menu__btn {
-        display: none !important;
-    }
 
-    .menu__box {
-        position: static !important;
-        display: flex !important;
-        padding: 0 !important;
-        width: auto !important;
-        min-height: auto !important;
-        background-color: inherit !important;
-        box-shadow: none !important;
-    }
+    main{
+        .valores{
+            .valores_container{
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                flex-direction: row;
+                gap: 2rem;
+            }
+            .valores_container_content{
+                flex: 1 1 calc((100% / 2) - 2rem );
+            }
+        }
 
-    .menu__box a {
-        font-size: 1.6em !important;
-        padding: 1rem !important;
-        color: rgba(255, 255, 255, 0.658) !important;
+        .liderença{
+            .liderença_container{
+                flex-direction: row;
+                flex-wrap: wrap
+            }
+            .liderença_container_content{
+                flex: 1 1 calc((100% / 2) - 2rem);
+            }
+        }
     }
-
-    .menu__box li {
-        margin-left: 1rem !important;
-    }
-
-    .menu__box a:hover {
-        transform: scale(1.1) !important;
-        background-color: transparent !important;
-        color: #ff1a1ab6 !important;
-    }
-    //hamburguer menu
-
 
 
 
@@ -478,7 +625,75 @@ main{
 
 }
 
+@media (min-width: 1200px) {
+    
 
+
+    main {
+        .valores {
+            .valores_container_content {
+                flex: 1 1 calc((100% / 4) - 2rem);
+            }
+        }
+
+        .liderença {
+            .liderença_container_content {
+                flex: 1 1 calc((100% / 4) - 2rem);
+            }
+        }
+    }
+
+
+
+
+
+
+    .jornada {
+        .timeline {
+            max-width: 900px;
+            margin: 0 auto;
+
+            // Reposiciona a linha para o centro exato
+            &::after {
+                left: 50% !important;
+                transform: translateX(-50%);
+                margin-left: 0;
+            }
+
+            .timeline_item {
+                width: 50% !important; // Obriga a ocupar só metade
+                padding: 20px !important;
+
+                // Configuração para os itens da ESQUERDA
+                &.left {
+                    left: 0 !important;
+                    text-align: right;
+                    padding-right: 45px !important; // Espaço para a linha
+
+                    &::after {
+                        right: -8px !important; // Cola a bolinha na linha (metade para fora)
+                        left: auto !important;
+                        top: 45px;
+                    }
+                }
+
+                // Configuração para os itens da DIREITA
+                &.right {
+                    left: 50% !important; // Move para a metade direita
+                    text-align: left;
+                    padding-left: 45px !important; // Espaço para a linha
+
+                    &::after {
+                        left: -8px !important; // Cola a bolinha na linha
+                        right: auto !important;
+                        top: 45px;
+                    }
+                }
+            }
+        }
+    }
+
+}
 
 
 //VERSÃO TABLET (Telas > 768px)
