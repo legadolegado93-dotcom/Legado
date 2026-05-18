@@ -29,14 +29,31 @@
     <!--Incon-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!--Incon-->
+
+    <style>
+        .header{
+            border: none;
+        }
+        .header_nav{
+            gap: 3rem;
+            flex-direction: column;
+        }
+        .voltar{
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.541);
+            font-size: 1.5em;
+            transition: all 0.2s ease-in-out;
+        }
+    </style>
 </head>
 
 <body>
 
     <header class="header">
         <nav class="header_nav largura-definida">
+            <a href="../homeTreinos.html" class="voltar"> < Voltar</a>
             <figure>
-                <a href="teste.html"><img src="../../assets/img/logo-xtreino.jpg" alt="" class="img"></a>
+                <a href="teste.html"><img src="../../../assets/img/logo-xtreino.jpg" alt="" class="img"></a>
             </figure>
         </nav>
     </header>
@@ -54,8 +71,8 @@
 
     <main>
         <section class="container largura-definida">
-            <h2>Selecione o Mês</h2>
-            <p>Escolha um mês para visualizar os treinos realizados</p>
+            <h2>Selecione o dia</h2>
+            <p>Escolha o dia para visualizar os treinos realizados</p>
 
             <div class="container_divsDates">
 
@@ -74,32 +91,14 @@
                 <div class="container_divsDates_divDate">
                     <div class="container_divsDates_divDate_icon">
                         <i class="fa-regular fa-calendar-check"></i>
-                        <p><span>6</span> treinos</p>
+                        
                     </div>
-                    <p>Abril 2026</p>
+                    <p>Dia 17/06</p>
                     <p>Ver dias de treino</p>
-                    <a href="../../pages/xtreino/treino-Abril.html" data-value="abril">Acessar <span>></span></a>
+                    <a href="../../xtreino/xtreino-junho/xtreinoJunho1.html" data-value="abril">Acessar <span>></span></a>
                 </div>
 
-                <div class="container_divsDates_divDate">
-                    <div class="container_divsDates_divDate_icon">
-                        <i class="fa-regular fa-calendar-check"></i>
-                        <p><span>4</span> treinos</p>
-                    </div>
-                    <p>Maio 2026</p>
-                    <p>Ver dias de treino</p>
-                    <a href="../../pages/xtreino/treino-maio.html" data-value="maio">Acessar <span>></span></a>
-                </div>
-
-                <div class="container_divsDates_divDate">
-                    <div class="container_divsDates_divDate_icon">
-                        <i class="fa-regular fa-calendar-check"></i>
-                        <p><span>4</span> treinos</p>
-                    </div>
-                    <p>Maio 2026</p>
-                    <p>Ver dias de treino</p>
-                    <a href="../../pages/xtreino/xtreino-junho/" data-value="maio">Acessar <span>></span></a>
-                </div>
+                
 
 
 
